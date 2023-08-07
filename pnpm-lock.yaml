@@ -4,20 +4,28 @@ importers:
 
   .:
     specifiers:
+      '@extend-chrome/messages': ^1.2.2
+      '@extend-chrome/storage': ^1.5.0
+      '@types/chrome': ^0.0.243
       '@types/node': ^17.0.24
       bumpp: ^7.1.1
       c8: ^7.11.0
       esno: ^0.14.1
+      fast-glob: ^3.3.1
       plop: ^3.0.5
       tsup: ^5.12.5
       typescript: ^4.6.3
       vite: ^2.9.5
       vitest: ^0.1.27
     devDependencies:
+      '@extend-chrome/messages': 1.2.2
+      '@extend-chrome/storage': 1.5.0
+      '@types/chrome': 0.0.243
       '@types/node': 17.0.24
       bumpp: 7.1.1
       c8: 7.11.0
       esno: 0.14.1
+      fast-glob: 3.3.1
       plop: 3.0.5
       tsup: 5.12.5_typescript@4.6.3
       typescript: 4.6.3
@@ -29,13 +37,13 @@ importers:
       '@vitejs/plugin-vue': ^2.3.1
       vite: ^2.9.5
       vite-plugin-inspect: ^0.3.15
-      vite-plugin-name: workspace:*
+      vite-plugin-mongo-crx: workspace:*
       vue: ^3.2.33
     devDependencies:
       '@vitejs/plugin-vue': 2.3.1_vite@2.9.5+vue@3.2.33
       vite: 2.9.5
       vite-plugin-inspect: 0.3.15_vite@2.9.5
-      vite-plugin-name: link:../..
+      vite-plugin-mongo-crx: link:../..
       vue: 3.2.33
 
 packages:
@@ -69,6 +77,21 @@ packages:
 
   /@bcoe/v8-coverage/0.2.3:
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
+    dev: true
+
+  /@extend-chrome/messages/1.2.2:
+    resolution: {integrity: sha512-1VyUCT+1jewkm7cVBE5fMrrazxuL5QrmCOg2azmItBpiTqwmV/XxhGDQAtfsT4i24xB4gwL0s7+6PpEPec+1mw==}
+    dependencies:
+      '@types/chrome': 0.0.99
+      '@types/node': 13.13.52
+      rxjs: 7.5.5
+    dev: true
+
+  /@extend-chrome/storage/1.5.0:
+    resolution: {integrity: sha512-JhoBZ1xIzu0/mauNR/MadUsfNsWP1lTmWR8RlVJvWStUifzNZdAxI2i8NFCkd4RfjyTn4FcDETik3SDlAfGQRA==}
+    dependencies:
+      chrome-promise: 3.0.5
+      rxjs: 7.5.5
     dev: true
 
   /@istanbuljs/schema/0.1.3:
@@ -129,8 +152,35 @@ packages:
     resolution: {integrity: sha512-/zPMqDkzSZ8t3VtxOa4KPq7uzzW978M9Tvh+j7GHKuo6k6GTLxPJ4J5gE5cjfJ26pnXst0N5Hax8Sr0T2Mi9zQ==}
     dev: true
 
+  /@types/chrome/0.0.243:
+    resolution: {integrity: sha512-4PHv0kxxxpZFHWPBiJJ9TWH8kbx0567j1b2djnhpJjpiSGNI7UKkz7dSEECBtQ0B3N5nQTMwSB/5IopkWGAbEA==}
+    dependencies:
+      '@types/filesystem': 0.0.32
+      '@types/har-format': 1.2.11
+    dev: true
+
+  /@types/chrome/0.0.99:
+    resolution: {integrity: sha512-la87+bjtZ6XstGqUdaLT5YfECSPw9Ex9iYQUOMGlBtgqI6FLGewGZtkByX5TcPBHM6XKp6RnR50Ytd+tI2m/6Q==}
+    dependencies:
+      '@types/filesystem': 0.0.32
+    dev: true
+
+  /@types/filesystem/0.0.32:
+    resolution: {integrity: sha512-Yuf4jR5YYMR2DVgwuCiP11s0xuVRyPKmz8vo6HBY3CGdeMj8af93CFZX+T82+VD1+UqHOxTq31lO7MI7lepBtQ==}
+    dependencies:
+      '@types/filewriter': 0.0.29
+    dev: true
+
+  /@types/filewriter/0.0.29:
+    resolution: {integrity: sha512-BsPXH/irW0ht0Ji6iw/jJaK8Lj3FJemon2gvEqHKpCdDCeemHa+rI3WBGq5z7cDMZgoLjY40oninGxqk+8NzNQ==}
+    dev: true
+
   /@types/fined/1.1.3:
     resolution: {integrity: sha512-CWYnSRnun3CGbt6taXeVo2lCbuaj4mchVJ4UF/BdU5TSuIn3AmS13pGMwCsBUoehGbhZrBrpNJZSZI5EVilXww==}
+    dev: true
+
+  /@types/har-format/1.2.11:
+    resolution: {integrity: sha512-T232/TneofqK30AD1LRrrf8KnjLvzrjWDp7eWST5KoiSzrBfRsLrWDPk4STQPW4NZG6v2MltnduBVmakbZOBIQ==}
     dev: true
 
   /@types/inquirer/8.2.1:
@@ -149,6 +199,10 @@ packages:
     dependencies:
       '@types/fined': 1.1.3
       '@types/node': 17.0.24
+    dev: true
+
+  /@types/node/13.13.52:
+    resolution: {integrity: sha512-s3nugnZumCC//n4moGGe6tkNMyYEdaDBitVjwPxXmR5lnMG5dHePinH2EdxkG3Rh1ghFHHixAG4NJhpJW1rthQ==}
     dev: true
 
   /@types/node/17.0.24:
@@ -521,6 +575,10 @@ packages:
       readdirp: 3.6.0
     optionalDependencies:
       fsevents: 2.3.2
+    dev: true
+
+  /chrome-promise/3.0.5:
+    resolution: {integrity: sha512-ekIevrJOO5S6ezSzl5TdaLhlQkovY5nVaNSgA2XyhuNtlGniUvTbf7rzH95alh1OajArwoP2xVGYUJbpVLmZYA==}
     dev: true
 
   /clean-stack/2.2.0:
@@ -966,8 +1024,8 @@ packages:
       tmp: 0.0.33
     dev: true
 
-  /fast-glob/3.2.11:
-    resolution: {integrity: sha512-xrO3+1bxSo3ZVHAnqzyuewYT6aMFHRAd4Kcs92MAonjwQZLsK9d0SF1IyQ3k5PoirxTW0Oe/RqFgMQ6TcNE5Ew==}
+  /fast-glob/3.3.1:
+    resolution: {integrity: sha512-kNFPyjhh5cKjrUltxs+wFx+ZkbRaxxmZ+X0ZU31SOsxCEtP9VPgtq2teZw1DebupL5GmDaNQ6yKMMVcM41iqDg==}
     engines: {node: '>=8.6.0'}
     dependencies:
       '@nodelib/fs.stat': 2.0.5
@@ -1143,7 +1201,7 @@ packages:
     dependencies:
       array-union: 2.1.0
       dir-glob: 3.0.1
-      fast-glob: 3.2.11
+      fast-glob: 3.3.1
       ignore: 5.2.0
       merge2: 1.4.1
       slash: 3.0.0
@@ -1155,7 +1213,7 @@ packages:
     dependencies:
       array-union: 3.0.1
       dir-glob: 3.0.1
-      fast-glob: 3.2.11
+      fast-glob: 3.3.1
       ignore: 5.2.0
       merge2: 1.4.1
       slash: 4.0.0
@@ -1302,7 +1360,7 @@ packages:
     dev: true
 
   /is-extglob/2.1.1:
-    resolution: {integrity: sha1-qIwCU1eR8C7TfHahueqXc8gz+MI=}
+    resolution: {integrity: sha512-SbKbANkN603Vi4jEZv49LeVJMn4yGwsbzZworEoyEiutsN3nJYdbO36zfhGJ6QEDpOZIFkDtnq5JRxmvl3jsoQ==}
     engines: {node: '>=0.10.0'}
     dev: true
 

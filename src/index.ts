@@ -1,5 +1,6 @@
 import type { Plugin } from 'vite'
 import { createPluginName } from './shared/create'
+import { defineManifest } from './manifest'
 
 interface Options {}
 
@@ -12,3 +13,7 @@ const usePlugin = (options?: Partial<Options>): Plugin => {
 }
 
 export default usePlugin
+
+export {
+	defineManifest
+}
