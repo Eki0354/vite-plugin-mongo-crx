@@ -1,6 +1,6 @@
-# vite-plugin-template
+# vite-plugin-vite-plugin-mongo-crx
 
-开箱即用的 vite 插件模板
+支持热重载和Injectd-Scripts的Chrome Extension开发框架核心插件
 
 <br />
 
@@ -90,7 +90,7 @@ pnpm release
 
 ## License
 
-Made with name
+Made with [Eki](https://github.com/Eki)
 
 Published under [MIT License](./LICENSE).
 
